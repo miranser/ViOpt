@@ -1,0 +1,14 @@
+D:\Projects\ViOpt\ViOpt\bin\Debug\netcoreapp2.2\ViOpt.deps.json
+D:\Projects\ViOpt\ViOpt\bin\Debug\netcoreapp2.2\ViOpt.runtimeconfig.json
+D:\Projects\ViOpt\ViOpt\bin\Debug\netcoreapp2.2\ViOpt.runtimeconfig.dev.json
+D:\Projects\ViOpt\ViOpt\bin\Debug\netcoreapp2.2\ViOpt.dll
+D:\Projects\ViOpt\ViOpt\bin\Debug\netcoreapp2.2\ViOpt.pdb
+D:\Projects\ViOpt\ViOpt\obj\Debug\netcoreapp2.2\ViOpt.csprojAssemblyReference.cache
+D:\Projects\ViOpt\ViOpt\obj\Debug\netcoreapp2.2\ViOpt.csproj.CoreCompileInputs.cache
+D:\Projects\ViOpt\ViOpt\obj\Debug\netcoreapp2.2\ViOpt.AssemblyInfoInputs.cache
+D:\Projects\ViOpt\ViOpt\obj\Debug\netcoreapp2.2\ViOpt.AssemblyInfo.cs
+D:\Projects\ViOpt\ViOpt\obj\Debug\netcoreapp2.2\ViOpt.dll
+D:\Projects\ViOpt\ViOpt\obj\Debug\netcoreapp2.2\ViOpt.pdb
+D:\Projects\ViOpt\ViOpt\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+D:\Projects\ViOpt\ViOpt\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+D:\Projects\ViOpt\ViOpt\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
