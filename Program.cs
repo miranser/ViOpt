@@ -422,7 +422,10 @@ namespace ViOpt
                 {
                     Print("ffmpeg found");
                     DefaultPath = wd;
-
+                    if (!Directory.Exists(Path.Combine(DefaultPath, "output")))
+                    {
+                        Directory.CreateDirectory(Path.Combine(DefaultPath, "output"));
+                    }
                 }
                 else
                 {
@@ -530,6 +533,27 @@ namespace ViOpt
             }
             Console.ReadLine();
         }
+        private static void GetOverallSize()
+        {
+            var uri = $"https://{InstanceURL}/api/now/attachment?sysparm_query=table_name%3Dkb_knowledge%5Econtent_type%3Dvideo%2Fmp4";
+            var request = GetRequest("GET", uri);
+            var responseObj = GetResponseJObject(request);
+            long size = 0;
+            long size_compressed = 0;
+            foreach (var item in responseObj["result"])
+            {
+                size += long.Parse(item["size_bytes"].ToString());
+                size_compressed += long.Parse(item["size_compressed"].ToString());
+            }
+            Console.WriteLine($@"
+                            There are {responseObj["result"].Count()} videos attached to kb_knowledge
+                            Overall size in bytes: {size}
+                            Overall size_compressed in bytes: {size_compressed}
+                            In Megabytes:
+                            Size:{(size / 1024) / 1024}MB
+                            Compressed:{(size_compressed / 1024) / 1024}MB");
+            Console.ReadLine();
+        }
         public static void Main(string[] args)
         {
 
@@ -539,7 +563,7 @@ namespace ViOpt
             SpecifyInstance(def);
             SpecifyCredintials(def);
 
-
+            GetOverallSize();
             Directory.SetCurrentDirectory(DefaultPath);
             List<VideoRecord> recordList = GetVideoListFromFile();
             if (GetVideoListFromFile() == null)
